@@ -1,1 +1,40 @@
-{     "devDependencies": {         "imagemin-optipng": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-imagemin-optipng",     "homepage": "https://github.com/npmtest/node-npmtest-imagemin-optipng",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-imagemin-optipng.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### test coverage for  [imagemin-optipng (v5.2.1)](https://github.com/imagemin/imagemin-optipng#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-imagemin-optipng.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-imagemin-optipng) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-imagemin-optipng.svg)](https://travis-ci.org/npmtest/node-npmtest-imagemin-optipng)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "imagemin-optipng": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-imagemin-optipng",
+    "keywords": [
+        "coverage",
+        "test",
+        "imagemin-optipng"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_imagemin_optipng.js",
+    "name": "npmtest-imagemin-optipng",
+    "nameAlias": "npmtest_imagemin_optipng",
+    "nameOriginal": "npmtest-imagemin-optipng",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-imagemin-optipng.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
